@@ -1,0 +1,37 @@
+# .NET build outputs
+bin/
+obj/
+
+# .NET user-specific files
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# Test results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# Allure results
+allure-results/
+
+# Playwright
+.playwright/
+playwright/.cache/
+test-results/
+playwright-report/
+
+# macOS
+.DS_Store
+
+# NuGet
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+packages/
+
+# IDE
+.idea/
