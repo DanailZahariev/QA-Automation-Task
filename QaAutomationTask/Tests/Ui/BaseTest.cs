@@ -9,7 +9,7 @@ using QaAutomationTask.Core;
 namespace QaAutomationTask.Tests.Ui;
 
 [AllureNUnit]
-public class BaseTest
+public abstract class BaseTest
 {
     private IPlaywright _playwright;
     private IBrowser _browser;
