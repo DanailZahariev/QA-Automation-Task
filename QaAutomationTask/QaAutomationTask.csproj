@@ -49,4 +49,8 @@
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
     </ItemGroup>
+    <Target Name="CopyAllureResults" AfterTargets="PostBuildEvent">
+        <Exec Command="xcopy /E /I /Y bin\Debug\net9.0\allure-results allure-results" Condition="'$(OS)' == 'Windows_NT'" />
+        <Exec Command="cp -R bin/Debug/net9.0/allure-results/ allure-results/" Condition="'$(OS)' != 'Windows_NT'" />
+    </Target>
 </Project>
