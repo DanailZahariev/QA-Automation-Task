@@ -1,3 +1,4 @@
+using System.Globalization;
 using Bogus;
 using QaAutomationTask.Models;
 
@@ -21,7 +22,7 @@ public class UserFactory
             .RuleFor(u => u.Email, f => f.Internet.Email())
             .RuleFor(u => u.Gender, f => f.PickRandom("Male", "Female", "Other"))
             .RuleFor(u => u.Mobile, f => f.Random.ReplaceNumbers("##########"))
-            .RuleFor(u => u.BirthDate, f => f.Date.Past(1).ToLongDateString())
+            .RuleFor(u => u.BirthDate, f => f.Date.Past(20).ToString("dd MMM yyyy", CultureInfo.InvariantCulture))
             .RuleFor(u => u.Subject, "Maths")
             .RuleFor(u => u.Hobbies, f => ["Sports", "Reading", "Music"])
             .RuleFor(u => u.Address, f => f.Address.StreetAddress())
