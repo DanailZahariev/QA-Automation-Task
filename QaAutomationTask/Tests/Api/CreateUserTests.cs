@@ -9,6 +9,7 @@ using QaAutomationTask.Services;
 namespace QaAutomationTask.Tests.Api;
 
 [AllureNUnit]
+[Category("Api")]
 [AllureEpic("Task 1: REST API Automated Test Exercise")]
 [AllureFeature("User Management")]
 public class CreateUserTests

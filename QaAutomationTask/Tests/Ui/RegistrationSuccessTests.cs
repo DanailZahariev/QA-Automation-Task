@@ -10,6 +10,7 @@ using QaAutomationTask.Tests.TestData;
 namespace QaAutomationTask.Tests.Ui;
 
 [TestFixture]
+[Category("Ui")]
 [AllureEpic("Task 2: UI Test Scenario")]
 [AllureFeature("Automation Practice Form")]
 public class RegistrationSuccessTests : BaseTest
