@@ -49,13 +49,4 @@
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
     </ItemGroup>
-
-    <Target Name="CopyAllureResults" AfterTargets="AfterBuild">
-        <ItemGroup>
-            <AllureFiles Include="$(OutputPath)allure-results/**/*.*"/>
-        </ItemGroup>
-        <Copy SourceFiles="@(AllureFiles)"
-              DestinationFolder="$(ProjectDir)allure-results/%(RecursiveDir)"
-              SkipUnchangedFiles="true"/>
-    </Target>
 </Project>
