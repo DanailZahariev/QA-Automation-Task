@@ -53,7 +53,6 @@ public class RegistrationValidationTests : BaseTest
     [Description(
         "Verifies that the form correctly handles various invalid inputs provided via test data (e.g. missing names, missing gender, short phone number).")]
     [TestCaseSource(typeof(RegistrationData), nameof(RegistrationData.GetInvalidRegistrationScenarios))]
-    [TestCaseSource(typeof(RegistrationData), nameof(RegistrationData.GetInvalidRegistrationScenarios))]
     public async Task Should_Show_Error_When_Data_Is_Invalid(RegistrationDto user, string expectedErrorFieldId)
     {
         await _registrationPage.FillFormAsync(user);
