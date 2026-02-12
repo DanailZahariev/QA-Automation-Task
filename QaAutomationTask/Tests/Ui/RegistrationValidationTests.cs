@@ -17,7 +17,7 @@ public class RegistrationValidationTests : BaseTest
     private RegistrationPage _registrationPage;
 
     [SetUp]
-    public async Task TestSetup()
+    public async Task PageSetup()
     {
         _registrationPage = new RegistrationPage(Page);
         await _registrationPage.NavigateToAsync(ConfigReader.AppSettings.UiSettings.BaseUrl);

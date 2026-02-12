@@ -11,7 +11,16 @@ public class ChromeStrategy : IBrowserStrategy
         return new BrowserTypeLaunchOptions
         {
             Headless = headless,
-            Args = ["--start-maximized", "--disable-infobars"],
+            Args =
+            [
+                "--start-maximized",
+                "--disable-infobars",
+                "--disable-extensions",
+                "--disable-gpu",
+                "--no-sandbox",
+                "--disable-dev-shm-usage",
+                "--blink-settings=imagesEnabled=false"
+            ],
             Channel = "chrome"
         };
     }
