@@ -138,17 +138,14 @@ After running the tests, the results are stored in the `allure-results` director
     ```
 
 2.  **Serve the report**:
-    This command generates the report in a temporary directory and opens it in your default browser.
-    ```bash
-    allure serve allure-results
-    ```
-
-3.  **Generate a static report** (Optional):
-    If you want to generate the report files for deployment or later viewing:
-    ```bash
-    allure generate allure-results --clean -o allure-report
-    ```
-    You can then open `index.html` inside the `allure-report` folder (note: some browsers restrict opening local HTML files with AJAX, so `allure serve` is recommended for local viewing).
+- If you are in the Solution root directory:
+```bash
+allure serve QaAutomationTask/bin/Debug/net9.0/allure-results
+```
+- If you are already inside the QaAutomationTask project directory:
+```bash
+allure serve bin/Debug/net9.0/allure-results
+```
 
 ## 🧩 Key Features
 
