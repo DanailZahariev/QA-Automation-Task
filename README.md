@@ -107,6 +107,16 @@ allure --version
 - .NET SDK 9.0 or later
 - Allure Commandline (see above)
 
+
+### 🛠 First Time Setup (Important!)
+After cloning the repo and restoring packages, you must install the Playwright browsers:
+
+```bash
+dotnet build
+pwsh bin/Debug/net9.0/playwright.ps1 install
+```
+
+
 ### Run all tests
 ```bash
 dotnet test

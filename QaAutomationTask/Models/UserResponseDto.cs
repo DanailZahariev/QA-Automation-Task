@@ -5,7 +5,7 @@ namespace QaAutomationTask.Models;
 public class UserResponseDto
 {
     [JsonProperty("id")] 
-    public int Id { get; set; } 
+    public int? Id { get; set; } 
 
     [JsonProperty("firstName")] 
     public string FirstName { get; set; }

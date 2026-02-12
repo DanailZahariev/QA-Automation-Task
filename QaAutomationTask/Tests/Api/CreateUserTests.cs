@@ -42,6 +42,6 @@ public class CreateUserTests
         response.Data.Should().NotBeNull();
         response.Data!.FirstName.Should().Be(userPayload.FirstName);
         response.Data!.LastName.Should().Be(userPayload.LastName);
-        // response.Data.Id.Should().NotBeNull();
+        response.Data.Id.Should().NotBeNull();
     }
 }

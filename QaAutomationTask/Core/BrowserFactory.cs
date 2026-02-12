@@ -19,12 +19,9 @@ public static class BrowserFactory
             _ => new ChromeStrategy()
         };
 
-        var browserOptions = new BrowserTypeLaunchOptions
-        {
-            SlowMo = slowMo,
-            Headless = isHeadless
-        };
-
+        var browserOptions = strategy.GetOptions(isHeadless);
+        browserOptions.SlowMo = slowMo;
+        
         var browserType = playwright[strategy.BrowserType];
         return await browserType.LaunchAsync(browserOptions);
     }
